@@ -1,6 +1,8 @@
 name: Build Debian Packages
 
-on: [push]
+on:
+  release:
+    types: [published]
 
 permissions:
   contents: write
