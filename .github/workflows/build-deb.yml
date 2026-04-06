@@ -1,15 +1,6 @@
 name: Build Debian Packages
 
-
-on:
-  push:
-    tags:
-      - 'v*'
-  workflow_dispatch:
-    inputs:
-      version_override:
-        description: 'Version override (e.g. 1.11.500). Defaults to tag or git describe.'
-        required: false
+on: [push]
 
 permissions:
   contents: write
