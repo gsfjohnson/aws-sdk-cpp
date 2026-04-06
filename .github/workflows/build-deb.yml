@@ -92,11 +92,11 @@ jobs:
           Maintainer: ${{ github.repository_owner }} <noreply@github.com>
           Homepage: https://github.com/${{ github.repository }}
           Description: AWS SDK for C++ - Core libraries and headers
-           Provides the AWS SDK for C++ core runtime library, AWS CRT
+           AWS SDK for C++ core runtime library, AWS CRT
            dependencies, and development headers. Required by all AWS
            SDK for C++ service packages.
           EOF
-          sed -i 's/^[[:space:]]*//' "${PKG_DIR}/DEBIAN/control"
+          #sed -i 's/^[[:space:]]*//' "${PKG_DIR}/DEBIAN/control"
 
           dpkg-deb --build "${PKG_DIR}" "${{ github.workspace }}/${PKG_FILE}"
 
@@ -135,10 +135,10 @@ jobs:
           Maintainer: ${{ github.repository_owner }} <noreply@github.com>
           Homepage: https://github.com/${{ github.repository }}
           Description: AWS SDK for C++ - Amazon S3 client
-           Provides the AWS SDK for C++ Amazon S3 service client as a
+           AWS SDK for C++ Amazon S3 service client as a
            shared library with development headers.
           EOF
-          sed -i 's/^[[:space:]]*//' "${PKG_DIR}/DEBIAN/control"
+          #sed -i 's/^[[:space:]]*//' "${PKG_DIR}/DEBIAN/control"
 
           dpkg-deb --build "${PKG_DIR}" "${{ github.workspace }}/${PKG_FILE}"
 
